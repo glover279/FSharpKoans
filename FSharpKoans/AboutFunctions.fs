@@ -123,7 +123,11 @@ module ``03: Putting the Function into Functional Programming`` =
     let ``17 Two names can be bound to the same value`` () =
         let f x = x + 2
         let y = f
+<<<<<<< HEAD
         y 20 |> should equal 22
+=======
+        y 20 |> should equal ___
+>>>>>>> 400a467c462aa18eba449909d2de3f0a987d61c5
 
 
     [<Test>]
@@ -165,11 +169,19 @@ module ``03: Putting the Function into Functional Programming`` =
         with the feature of higher-order functions :).
     *)
         let somefunc x y = x + y x
+<<<<<<< HEAD
         let square v = (v * v)
         somefunc 3 square |> should equal 12
         somefunc 3 ((*) 7) |> should equal 24
         somefunc 10 ((+) 8) |> should equal 28
         somefunc 5 (fun z -> z + 22) |> should equal 32
+=======
+        let square v = v * v
+        somefunc 3 square |> should equal __
+        somefunc 3 ((*) 7) |> should equal __
+        somefunc 10 ((+) 8) |> should equal __
+        somefunc 5 (fun z -> z + 22) |> should equal __
+>>>>>>> 400a467c462aa18eba449909d2de3f0a987d61c5
 
    (*
        Did you know that operators like +, -, =, >, and so on, are actually
